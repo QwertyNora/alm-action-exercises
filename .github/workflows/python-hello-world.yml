@@ -1,0 +1,19 @@
+name: python-hello-world
+
+on:
+  push:
+    branches:
+      - exercise2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: checing out repository
+        run: git checkout
+
+      - name: Run Python script
+        run: python hello.py
